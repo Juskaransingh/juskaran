@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Features • FitLife Students</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html">FitLife Students</a>
+    <button class="nav-toggle" aria-label="Toggle Navigation"></button>
+    <nav class="menu">
+      <a href="index.html">Home</a>
+      <a class="active" href="features.html">Features</a>
+      <a href="tools.html">Tools</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="btn btn-sm">Contact</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="page-hero reveal">
+    <div class="container">
+      <h1>Features</h1>
+      <p>Plan smart meals, do quick workouts, and track weekly progress.</p>
+    </div>
+  </section>
+  <section class="diet-planner reveal">
+    <div class="container">
+      <h2>Personalized Diet Planner</h2>
+      <div class="controls">
+        <select id="diet-type">
+          <option value="veg">Veg</option>
+          <option value="nonveg">Non-veg</option>
+          <option value="highprotein">High-protein</option>
+        </select>
+      </div>
+      <div id="diet-cards" class="grid cards"></div>
+    </div>
+  </section>
+  <section id="workouts" class="workouts reveal">
+    <div class="container">
+      <h2>Quick Student Workouts</h2>
+      <div class="grid cards">
+        <div class="card">
+          <h3>10 Minutes</h3>
+          <p>Bodyweight squats, push-ups, planks, jumping jacks, repeat once.</p>
+          <a class="btn btn-outline" href="https://www.youtube.com/results?search_query=10+minute+no+equipment+workout" target="_blank">Watch</a>
+        </div>
+        <div class="card">
+          <h3>20 Minutes</h3>
+          <p>Low-impact HIIT: alternating lunges, mountain climbers, bicycle crunches.</p>
+          <a class="btn btn-outline" href="https://www.youtube.com/results?search_query=20+minute+no+equipment+workout" target="_blank">Watch</a>
+        </div>
+        <div class="card">
+          <h3>No Equipment</h3>
+          <p>Dorm-friendly routines using just space and a mat.</p>
+          <a class="btn btn-outline" href="https://www.youtube.com/results?search_query=no+equipment+workout" target="_blank">Watch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="progress reveal">
+    <div class="container">
+      <h2>Weekly Progress Tracker</h2>
+      <div class="tracker card">
+        <div class="tracker-row">
+          <label>Week</label>
+          <select id="week-select">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+          </select>
+        </div>
+        <div class="tracker-row">
+          <label>Workouts</label>
+          <input id="workouts-count" type="number" min="0" max="14" value="3">
+        </div>
+        <div class="tracker-row">
+          <label>Healthy Meals</label>
+          <input id="meals-count" type="number" min="0" max="21" value="12">
+        </div>
+        <button class="btn" id="save-week">Save</button>
+        <div class="progress-bar">
+          <div id="progress-fill"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="brand">FitLife Students</div>
+      <p>Built to simplify healthy living on campus.</p>
+    </div>
+    <div class="links">
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="dashboard.html">Dashboard</a>
+    </div>
+  </div>
+</footer>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+:root{--green:#22c55e;--blue:#3b82f6;--bg:#f7fafc;--text:#0f172a;--muted:#64748b;--card:#ffffff;--radius:16px;--radius-sm:12px;--shadow:0 10px 24px rgba(15,23,42,.08)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Poppins,system-ui,Arial,sans-serif;background:linear-gradient(180deg,#f9fbff,#f7fafc);color:var(--text)}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+input,select,textarea,button{font-family:inherit}
+.container{width:100%;max-width:1100px;margin:0 auto;padding:0 20px}
+.site-header{position:sticky;top:0;background:rgba(255,255,255,.8);backdrop-filter:saturate(1.5) blur(8px);border-bottom:1px solid rgba(226,232,240,.7);z-index:50}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font-weight:700;letter-spacing:.2px}
+.menu{display:none;gap:16px;align-items:center;position:absolute;right:20px;top:64px;background:#fff;padding:12px;border-radius:14px;box-shadow:var(--shadow)}
+.menu.open{display:flex;flex-direction:column}
+.menu a{padding:8px 12px;border-radius:10px;color:var(--muted)}
+.menu a.active{color:var(--text);background:rgba(59,130,246,.12)}
+.nav-toggle{width:40px;height:40px;border:none;background:linear-gradient(135deg,rgba(34,197,94,.15),rgba(59,130,246,.15));border-radius:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:14px;background:linear-gradient(135deg,var(--green),var(--blue));color:#fff;box-shadow:var(--shadow);transition:transform .2s ease,opacity .2s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn-outline{background:#fff;color:var(--text);border:1px solid rgba(0,0,0,.08)}
+.btn-sm{padding:8px 12px;border-radius:10px}
+.hero{padding:72px 0}
+.hero-grid{display:grid;grid-template-columns:1fr;gap:28px;align-items:center}
+.hero-text h1{font-size:42px;line-height:1.1;margin:0 0 10px}
+.hero-text p{color:var(--muted);font-size:18px}
+.cta{display:flex;gap:12px;margin-top:18px}
+.art{width:100%;height:auto}
+.hero-img{width:100%;height:auto;border-radius:16px;box-shadow:var(--shadow);aspect-ratio:4/3;object-fit:cover}
+.features-preview{padding:50px 0}
+.features-preview h2{margin:0 0 16px}
+.grid{display:grid;grid-template-columns:1fr;gap:16px}
+.cards .card{border-radius:var(--radius);background:var(--card);box-shadow:var(--shadow);padding:20px;transition:transform .2s ease}
+.cards .card:hover{transform:translateY(-2px)}
+.cards .card .preview-svg{width:100%;height:140px;border-radius:12px;margin-bottom:12px}
+.card-img{width:100%;height:160px;border-radius:12px;object-fit:cover;margin-bottom:12px}
+@media(min-width:700px){.card-img{height:200px}}
+.icon{width:48px;height:48px;border-radius:14px;margin-bottom:12px}
+.i1{background:linear-gradient(135deg,#bbf7d0,#dbeafe)}
+.i2{background:linear-gradient(135deg,#86efac,#93c5fd)}
+.i3{background:linear-gradient(135deg,#a7f3d0,#bfdbfe)}
+.page-hero{padding:50px 0}
+.diet-planner,.workouts,.progress,.tools-grid,.dashboard-grid,.about-content,.contact-section{padding:30px 0}
+.tool{display:flex;flex-direction:column;gap:14px}
+.tool-form{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.field{display:flex;flex-direction:column;gap:6px}
+.field input,.field select,.field textarea{padding:12px 14px;border:1px solid rgba(0,0,0,.08);border-radius:12px;background:#fff}
+.tool-result{margin-top:6px;color:var(--muted)}
+.progress-bar{width:100%;height:14px;background:#eef2ff;border-radius:999px;overflow:hidden}
+#progress-fill,#water-fill{height:100%;width:0;background:linear-gradient(90deg,var(--green),var(--blue))}
+.footer-grid{display:grid;grid-template-columns:1fr;gap:16px;padding:26px 0}
+.site-footer{border-top:1px solid rgba(226,232,240,.7);background:#fff}
+.links{display:flex;gap:12px}
+.profile-form,.progress-form{display:grid;gap:12px}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+.meal-plan table{width:100%;border-collapse:collapse}
+.meal-plan th,.meal-plan td{border:1px solid rgba(0,0,0,.06);padding:10px;border-radius:8px}
+.meal-actions{display:flex;gap:10px;margin-top:12px}
+.workout-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.workout-item{display:flex;align-items:center;gap:10px;background:var(--card);border-radius:var(--radius-sm);box-shadow:var(--shadow);padding:12px}
+.tag{font-size:12px;padding:6px 10px;border-radius:999px;background:rgba(59,130,246,.12);color:#1e40af}
+.reveal{opacity:0;transform:translateY(8px);transition:opacity .5s ease,transform .5s ease}
+.reveal.active{opacity:1;transform:translateY(0)}
+@media(min-width:700px){.hero-grid{grid-template-columns:1.1fr .9fr}.grid{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:1.5fr .5fr}.menu{display:flex;position:static;flex-direction:row;background:transparent;padding:0;box-shadow:none}.nav-toggle{display:none}}
+@media(min-width:980px){.grid{grid-template-columns:repeat(3,1fr)}}

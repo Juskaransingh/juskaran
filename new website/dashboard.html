@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard • FitLife Students</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html">FitLife Students</a>
+    <button class="nav-toggle" aria-label="Toggle Navigation"></button>
+    <nav class="menu">
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="tools.html">Tools</a>
+      <a class="active" href="dashboard.html">Dashboard</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="btn btn-sm">Contact</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="page-hero reveal">
+    <div class="container">
+      <h1>Your Dashboard</h1>
+      <p>Edit your profile, plan meals and workouts, and track progress.</p>
+    </div>
+  </section>
+  <section class="dashboard-grid reveal">
+    <div class="container grid">
+      <div class="card">
+        <h3>Profile</h3>
+        <form id="profile-form" class="profile-form">
+          <div class="field">
+            <label>Name</label>
+            <input id="prof-name" type="text" placeholder="Your name">
+          </div>
+          <div class="field">
+            <label>Major</label>
+            <input id="prof-major" type="text" placeholder="Major">
+          </div>
+          <div class="field">
+            <label>Year</label>
+            <select id="prof-year">
+              <option>Freshman</option>
+              <option>Sophomore</option>
+              <option>Junior</option>
+              <option>Senior</option>
+            </select>
+          </div>
+          <div class="field grid-2">
+            <div>
+              <label>Height (cm)</label>
+              <input id="prof-height" type="number" min="140" max="220" value="170">
+            </div>
+            <div>
+              <label>Weight (kg)</label>
+              <input id="prof-weight" type="number" min="40" max="150" value="65">
+            </div>
+          </div>
+          <button class="btn" type="submit">Save</button>
+          <div id="prof-status" class="tool-result"></div>
+        </form>
+      </div>
+      <div class="card">
+        <h3>Weekly Meal Plan</h3>
+        <div class="meal-plan">
+          <table id="meal-table">
+            <thead>
+              <tr>
+                <th>Day</th>
+                <th>Breakfast</th>
+                <th>Lunch</th>
+                <th>Dinner</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Mon</td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
+              <tr><td>Tue</td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
+              <tr><td>Wed</td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
+              <tr><td>Thu</td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
+              <tr><td>Fri</td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
+              <tr><td>Sat</td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
+              <tr><td>Sun</td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
+            </tbody>
+          </table>
+          <div class="meal-actions">
+            <button class="btn" id="meal-save">Save Plan</button>
+            <button class="btn btn-outline" id="meal-load">Load Suggestions</button>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Workout Schedule</h3>
+        <div class="workout-grid">
+          <div class="workout-item">
+            <div class="tag">Mon</div>
+            <a href="https://www.youtube.com/watch?v=ml6cT4AZdqI" target="_blank">Full Body HIIT</a>
+          </div>
+          <div class="workout-item">
+            <div class="tag">Tue</div>
+            <a href="https://www.youtube.com/watch?v=UBMk30rjy0o" target="_blank">Abs Burn</a>
+          </div>
+          <div class="workout-item">
+            <div class="tag">Wed</div>
+            <a href="https://www.youtube.com/watch?v=2pLT-olgUJs" target="_blank">Legs & Glutes</a>
+          </div>
+          <div class="workout-item">
+            <div class="tag">Thu</div>
+            <a href="https://www.youtube.com/watch?v=IODxDxX7oi4" target="_blank">Upper Body</a>
+          </div>
+          <div class="workout-item">
+            <div class="tag">Fri</div>
+            <a href="https://www.youtube.com/watch?v=50kH47ZztHs" target="_blank">Cardio Blast</a>
+          </div>
+          <div class="workout-item">
+            <div class="tag">Sat</div>
+            <a href="https://www.youtube.com/watch?v=1SkBf6WJdeQ" target="_blank">No Equipment</a>
+          </div>
+          <div class="workout-item">
+            <div class="tag">Sun</div>
+            <a href="https://www.youtube.com/watch?v=UItWltVZZmE" target="_blank">Stretch & Recover</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Progress Chart</h3>
+        <canvas id="progress-canvas" width="800" height="380"></canvas>
+        <form id="progress-form" class="progress-form">
+          <div class="field grid-3">
+            <div>
+              <label>Day (1-7)</label>
+              <input id="prog-day" type="number" min="1" max="7" value="1">
+            </div>
+            <div>
+              <label>Weight (kg)</label>
+              <input id="prog-weight" type="number" min="40" max="150" value="65">
+            </div>
+            <div>
+              <label>Calories</label>
+              <input id="prog-cal" type="number" min="1000" max="4000" value="2200">
+            </div>
+          </div>
+          <div class="field grid-2">
+            <div>
+              <label>Workouts</label>
+              <input id="prog-workouts" type="number" min="0" max="3" value="1">
+            </div>
+            <div>
+              <label>Action</label>
+              <select id="prog-action">
+                <option value="add">Add/Update</option>
+                <option value="reset">Reset</option>
+              </select>
+            </div>
+          </div>
+          <button class="btn" type="submit">Apply</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="brand">FitLife Students</div>
+      <p>Track your habits and celebrate progress.</p>
+    </div>
+    <div class="links">
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="tools.html">Tools</a>
+    </div>
+  </div>
+</footer>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

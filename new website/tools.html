@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tools • FitLife Students</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html">FitLife Students</a>
+    <button class="nav-toggle" aria-label="Toggle Navigation"></button>
+    <nav class="menu">
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a class="active" href="tools.html">Tools</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="btn btn-sm">Contact</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="page-hero reveal">
+    <div class="container">
+      <h1>Tools</h1>
+      <p>Use simple calculators to guide daily choices.</p>
+    </div>
+  </section>
+  <section class="tools-grid reveal">
+    <div class="container grid cards">
+      <div class="card tool">
+        <h3>BMI Calculator</h3>
+        <form id="bmi-form" class="tool-form">
+          <div class="field">
+            <label>Height (cm)</label>
+            <input id="bmi-height" type="number" min="100" max="230" value="170">
+          </div>
+          <div class="field">
+            <label>Weight (kg)</label>
+            <input id="bmi-weight" type="number" min="30" max="200" value="65">
+          </div>
+          <button class="btn" type="submit">Calculate</button>
+        </form>
+        <div id="bmi-result" class="tool-result"></div>
+      </div>
+      <div class="card tool">
+        <h3>Daily Calorie Calculator</h3>
+        <form id="calorie-form" class="tool-form">
+          <div class="field">
+            <label>Age</label>
+            <input id="cal-age" type="number" min="15" max="80" value="20">
+          </div>
+          <div class="field">
+            <label>Gender</label>
+            <select id="cal-gender">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Height (cm)</label>
+            <input id="cal-height" type="number" min="140" max="220" value="170">
+          </div>
+          <div class="field">
+            <label>Weight (kg)</label>
+            <input id="cal-weight" type="number" min="40" max="150" value="65">
+          </div>
+          <div class="field">
+            <label>Activity</label>
+            <select id="cal-activity">
+              <option value="1.2">Sedentary</option>
+              <option value="1.375">Lightly active</option>
+              <option value="1.55">Moderately active</option>
+              <option value="1.725">Very active</option>
+            </select>
+          </div>
+          <button class="btn" type="submit">Calculate</button>
+        </form>
+        <div id="calorie-result" class="tool-result"></div>
+      </div>
+      <div class="card tool">
+        <h3>Water Intake Tracker</h3>
+        <form id="water-form" class="tool-form">
+          <div class="field">
+            <label>Weight (kg)</label>
+            <input id="water-weight" type="number" min="40" max="150" value="65">
+          </div>
+          <div class="field">
+            <label>Glass Size (ml)</label>
+            <input id="glass-size" type="number" min="150" max="500" value="250">
+          </div>
+          <button class="btn" type="submit">Set Goal</button>
+        </form>
+        <div class="water-ui">
+          <div class="progress-bar">
+            <div id="water-fill"></div>
+          </div>
+          <div class="water-actions">
+            <button class="btn btn-outline" id="water-minus">-1 glass</button>
+            <div id="water-status"></div>
+            <button class="btn" id="water-plus">+1 glass</button>
+          </div>
+        </div>
+      </div>
+      <div class="card tool">
+        <h3>Step Counter</h3>
+        <p>Coming soon. For now, log your steps daily.</p>
+        <button class="btn" id="step-placeholder">Start Step Counter</button>
+        <div id="step-status" class="tool-result"></div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="brand">FitLife Students</div>
+      <p>Tools to make healthy choices easy.</p>
+    </div>
+    <div class="links">
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="dashboard.html">Dashboard</a>
+    </div>
+  </div>
+</footer>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
